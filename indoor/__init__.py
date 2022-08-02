@@ -13,8 +13,8 @@ def testhello():
 
 @check50.check(exists)
 def testcs50():
-    """input of THIS IS CS50 yields output of this is cs50"""
-    check50.run("python3 indoor.py").stdin("THIS IS CS50", prompt=False).stdout("this is cs50").exit()
+    """input of WELCOME TO WENTWORTH COMPUTER SCIENCE COLLEGE yields output of welcome to wentworth computer science college"""
+    check50.run("python3 indoor.py").stdin("WELCOME TO WENTWORTH COMPUTER SCIENCE COLLEGE", prompt=False).stdout("welcome to wentworth computer science college").exit()
 
 @check50.check(exists)
 def testnumber():
