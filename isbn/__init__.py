@@ -21,16 +21,16 @@ def test_valid_isbn_3():
     check50.run("python isbn.py").stdin("048665088X").stdout("YES").exit()
 
 @check50.check(exists)
-def test_valid_isbn_3():
+def test_invalid_isbn_1():
     """rejects an invalid ISBN: 1112223334"""
     check50.run("python isbn.py").stdin("111222333").stdout("NO").exit()
 
 @check50.check(exists)
-def test_valid_isbn_3():
+def test_invalid_isbn_2():
     """rejects an invalid ISBN: 1112223339X"""
     check50.run("python isbn.py").stdin("1112223339X").stdout("NO").exit()
 
 @check50.check(exists)
-def test_valid_isbn_3():
+def test_invalid_isbn_3():
     """rejects an invalid ISBN: 1234512345"""
     check50.run("python isbn.py").stdin("1234512345").stdout("NO").exit()
