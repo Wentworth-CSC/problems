@@ -36,7 +36,7 @@ def test34():
     
 @check50.check(exists)
 def test58():
-    """handles a height of 58 correctly"""
+    """handles a height of 5 8 correctly"""
     out = check50.run("python3 punch.py").stdin("5 8").stdout()
     check_card(out, open("58.txt").read())
 
