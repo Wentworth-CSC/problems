@@ -7,12 +7,20 @@ def exists():
     """coke.py exists"""
     check50.exists("coke.py")
 
+@check50.check(exists)
+def test_50():
+    """coke accepts 50 cents"""
+    input = "50"
+    output = "0"
+    check50.run("python3 coke.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).kill()
+
+
 
 @check50.check(exists)
-def test_25():
-    """coke accepts 25 cents"""
-    input = "25"
-    output = "25"
+def test_20():
+    """coke accepts 20 cents"""
+    input = "20"
+    output = "30"
     check50.run("python3 coke.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).kill()
 
 
@@ -59,9 +67,9 @@ def test_terminate():
 @check50.check(exists)
 def test_change():
     """coke provides correct change"""
-    input = "25"
+    input = "20"
     output = "10"
-    check50.run("python3 coke.py").stdin(input, prompt=True).stdin("10", prompt=True).stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+    check50.run("python3 coke.py").stdin(input, prompt=True).stdin(input, prompt=True).stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
 def regex(text):
