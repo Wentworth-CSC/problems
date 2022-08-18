@@ -4,7 +4,7 @@ import check50
 def exists():
     """punch.py exists."""
     check50.exists("punch.py")
-    check50.include("22.txt", "23.txt", "34.txt", "58".txt)
+    check50.include("22.txt", "23.txt", "34.txt", "58.txt")
 
 #@check50.check(exists)
 #def test_reject_negative():
