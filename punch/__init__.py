@@ -29,14 +29,14 @@ def test2():
     check_card(out, open("23.txt").read())
 
 @check50.check(exists)
-def test23():
-    """handles a height of 8 correctly"""
+def test34():
+    """handles a height of 3 4 correctly"""
     out = check50.run("python3 punch.py").stdin("3 4").stdout()
     check_card(out, open("34.txt").read())
     
 @check50.check(exists)
-def test23():
-    """handles a height of 8 correctly"""
+def test58():
+    """handles a height of 58 correctly"""
     out = check50.run("python3 punch.py").stdin("5 8").stdout()
     check_card(out, open("58.txt").read())
 
