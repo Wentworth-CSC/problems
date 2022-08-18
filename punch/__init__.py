@@ -14,47 +14,47 @@ def exists():
 #@check50.check(exists)
 #def test0():
 #    """rejects a height of 0"""
-#    check50.run("python3 mario.py").stdin("0").reject()
+#    check50.run("python3 punch.py").stdin("0").reject()
 
 @check50.check(exists)
 def test1():
     """handles a height of 2 2 correctly"""
-    out = check50.run("python3 mario.py").stdin("2 2").stdout()
+    out = check50.run("python3 punch.py").stdin("2 2").stdout()
     check_card(out, open("22.txt").read())
 
 @check50.check(exists)
 def test2():
     """handles a height of 2 3 correctly"""
-    out = check50.run("python3 mario.py").stdin("2 3").stdout()
+    out = check50.run("python3 punch.py").stdin("2 3").stdout()
     check_card(out, open("23.txt").read())
 
 @check50.check(exists)
 def test23():
     """handles a height of 8 correctly"""
-    out = check50.run("python3 mario.py").stdin("3 4").stdout()
+    out = check50.run("python3 punch.py").stdin("3 4").stdout()
     check_card(out, open("34.txt").read())
     
 @check50.check(exists)
 def test23():
     """handles a height of 8 correctly"""
-    out = check50.run("python3 mario.py").stdin("5 8").stdout()
+    out = check50.run("python3 punch.py").stdin("5 8").stdout()
     check_card(out, open("58.txt").read())
 
 #@check50.check(exists)
 #def test24():
 #    """rejects a height of 9, and then accepts a height of 2"""
-#    (check50.run("python3 mario.py").stdin("9").reject()
+#    (check50.run("python3 punch.py").stdin("9").reject()
 #            .stdin("2").stdout(open("2.txt")).exit(0))
 
 #@check50.check(exists)
 #def test_reject_foo():
 #    """rejects a non-numeric height of "foo" """
-#    check50.run("python3 mario.py").stdin("foo").reject()
+#    check50.run("python3 punch.py").stdin("foo").reject()
 
 #@check50.check(exists)
 #def test_reject_empty():
 #    """rejects a non-numeric height of "" """
-#    check50.run("python3 mario.py").stdin("").reject()
+#    check50.run("python3 punch.py").stdin("").reject()
 
 
 def check_card(output, correct):
