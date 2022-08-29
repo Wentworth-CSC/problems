@@ -20,7 +20,7 @@ def test_no_tea():
 def test_order():
     """input of two teas yields output both teas in the correct order"""
     output = "200 100 0 0 0 0"
-    check50.run("python3 tea.py").stdin("C 100", prompt=True).stdin("G 200", prompt=True).stdout(regex(output), output, regex=True).exit()
+    check50.run("python3 tea.py").stdin("C 100", prompt=True).stdin("G 200", prompt=True).stdin("D", prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
 @check50.check(exists)
