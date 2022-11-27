@@ -1,6 +1,5 @@
 submit50:
   files: &submit50_files
-    - !exclude "*"
     - !require shirtificate.py
   style: false
   
