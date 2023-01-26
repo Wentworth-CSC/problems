@@ -8,8 +8,8 @@ def exists():
 
 @check50.check(exists)
 def testcs50():
-    """input of \"This is CS50\" yields output of \"This...is...CS50\""""
-    check50.run("python3 playback.py").stdin("This is CS50", prompt=False).stdout(r"This\.\.\.is\.\.\.CS50|This…is…CS50", "This...is...CS50").exit()
+    """input of \"This is Wentworth Computer Science College\" yields output of \"This...is...Wentworth...Computer...Science...College\""""
+    check50.run("python3 playback.py").stdin("This is Wentworth Computer Science College", prompt=False).stdout(r"This\.\.\.is\.\.\.CS50|This…is…CS50", "This...is...Wentworth...Computer...Science...College").exit()
 
 @check50.check(exists)
 def testfunctions():
