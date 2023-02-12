@@ -23,5 +23,5 @@ def testnumber():
     
 @check50.check(exists)
 def testmix():
-    """input of Two (2) slabs of Chocolate are YUMMY yields output of 50"""
+    """input of Two (2) slabs of Chocolate are YUMMY yields output of TWO (2) SLABS OF CHOCOLATE ARE YUMMY"""
     check50.run("python3 shout.py").stdin("Two (2) slabs of Chocolate are YUMMY", prompt=False).stdout("TWO (2) SLABS OF CHOCOLATE ARE YUMMY").exit()
