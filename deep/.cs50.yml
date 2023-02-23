@@ -3,7 +3,6 @@ submit50:
     - !exclude "*"
     - !include "*.py"
     - !require deep.py
-  style: false
   
 check50:
   files: *submit50_files
