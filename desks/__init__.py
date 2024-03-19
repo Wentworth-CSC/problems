@@ -10,12 +10,12 @@ def exists():
 @check50.check(exists)
 def test_one():
     """desks accepts 20, 21, 22"""
-    check50.run("python3 coke.py").stdin("20", prompt=True).stdin("21", prompt=True).stdin("22", prompt=True).stdout("32").exit()
+    check50.run("python3 coke.py").stdin("20").stdin("21").stdin("22").stdout("32").exit()
 
 @check50.check(exists)
 def test_two():
     """desks accepts 1, 1, 1"""
-    check50.run("python3 coke.py").stdin("1", prompt=True).stdin("1", prompt=True).stdin("1", prompt=True).stdout("3").exit()
+    check50.run("python3 coke.py").stdin("1").stdin("1").stdin("1").stdout("3").exit()
 
 @check50.check(exists)
 def test_three():
