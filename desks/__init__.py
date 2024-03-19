@@ -25,7 +25,7 @@ def test_three():
 @check50.check(exists)
 def test_four():
     """desks accepts 25, 21, 23"""
-    check50.run("python3 desks.py").stdin("25", prompt=True).stdin("21", prompt=True).stdin("23", prompt=True).stdout("26").exit()
+    check50.run("python3 desks.py").stdin("25", prompt=True).stdin("21", prompt=True).stdin("23", prompt=True).stdout("36").exit()
 
 @check50.check(exists)
 def test_five():
