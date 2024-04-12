@@ -18,25 +18,25 @@ def exists():
 
 @check50.check(exists)
 def test1():
-    """handles a height of 2 2 correctly"""
+    """handles a height of <small> correctly"""
     out = check50.run("python3 punch.py").stdin("2 2").stdout()
     check_card(out, open("22.txt").read())
 
 @check50.check(exists)
 def test2():
-    """handles a height of 2 3 correctly"""
+    """handles a height of <less small> correctly"""
     out = check50.run("python3 punch.py").stdin("2 3").stdout()
     check_card(out, open("23.txt").read())
 
 @check50.check(exists)
 def test34():
-    """handles a height of 3 4 correctly"""
+    """handles a height of medium correctly"""
     out = check50.run("python3 punch.py").stdin("3 4").stdout()
     check_card(out, open("34.txt").read())
     
 @check50.check(exists)
 def test58():
-    """handles a height of 5 8 correctly"""
+    """handles a height of <larger> correctly"""
     out = check50.run("python3 punch.py").stdin("5 8").stdout()
     check_card(out, open("58.txt").read())
 
