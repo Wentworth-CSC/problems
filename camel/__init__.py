@@ -10,25 +10,25 @@ def exists():
 
 @check50.check(exists)
 def test_name():
-    """input of \"name\" yields output of \"name\""""
-    input = "name"
-    output = "name"
+    """input of \"<secret 1>\" yields output of \"<secret 1>\""""
+    input = "variable"
+    output = "variable"
     check50.run("python3 camel.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
 @check50.check(exists)
 def test_firstName():
-    """input of \"firstName\" yields output of \"first_name\""""
-    input = "firstName"
-    output = "first_name"
+    """input of \"<secret 2>\" yields output of \"<secret 2>\""""
+    input = "myFirstName"
+    output = "my_first_name"
     check50.run("python3 camel.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
 @check50.check(exists)
 def test_preferredFirstName():
-    """input of \"preferredFirstName\" yields output of \"preferred_first_name\""""
-    input = "preferredFirstName"
-    output = "preferred_first_name"
+    """input of \"<secret 3>\" yields output of \"<secret 3>\""""
+    input = "wentworthComputerScienceCollege"
+    output = "wentworth_computer_science_college"
     check50.run("python3 camel.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
