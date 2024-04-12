@@ -40,6 +40,7 @@ def test_1():
     check50.run("python3 coke.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).kill()
 
 
+
 @check50.check(exists)
 def test_invalid():
     """coke rejects invalid amount of cents"""
@@ -47,6 +48,12 @@ def test_invalid():
     output = "50"
     check50.run("python3 coke.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).kill()
 
+@check50.check(exists)
+def test_invalid():
+    """coke rejects invalid coin"""
+    input = "25"
+    output = "50"
+    check50.run("python3 coke.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).kill()
 
 @check50.check(exists)
 def test_multiple():
