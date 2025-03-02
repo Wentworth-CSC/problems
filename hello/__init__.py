@@ -15,3 +15,8 @@ def emma():
 def rodrigo():
     """responds to name Rodrigo"""
     check50.run("python hello.py").stdin("Rodrigo").stdout("Rodrigo").exit()
+
+@check50.check(exists)
+def monty():
+    """responds to a hidden name"""
+    check50.run("python hello.py").stdin("Monty").stdout("Monty").exit()
