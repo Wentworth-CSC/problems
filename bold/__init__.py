@@ -19,9 +19,9 @@ def red():
 @check50.check(exists)
 def sentence():
     """responds to a sentence \"Welcome to Wentworth\""""
-    check50.run("python bold.py").stdin("Welcome to Wentworth", prompt=False).stdout("*Welcome*to*Wentworth*").exit()
+    check50.run("python bold.py").stdin("Welcome to Wentworth", prompt=False).stdout("\*Welcome\*to\*Wentworth\*").exit()
 
 @check50.check(exists)
 def hidden():
     """responds to an unknown test"""
-    check50.run("python bold.py").stdin("42 Green Flies! How awful!", prompt=False).stdout("*42*Green*Flies!*How*awful!*").exit()
+    check50.run("python bold.py").stdin("42 Green Flies! How awful!", prompt=False).stdout("\*42\*Green\*Flies!\*How\*awful!\*").exit()
