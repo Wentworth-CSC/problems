@@ -9,12 +9,12 @@ def exists():
 @check50.check(exists)
 def bob():
     """responds to a name Bob"""
-    check50.run("python bold.py").stdin("Bob", prompt=False).stdout("*Bob*").exit()
+    check50.run("python bold.py").stdin("Bob", prompt=False).stdout("\*Bob\*").exit()
 
 @check50.check(exists)
 def red():
     """responds to a colour red"""
-    check50.run("python bold.py").stdin("red", prompt=False).stdout("*red*").exit()
+    check50.run("python bold.py").stdin("red", prompt=False).stdout("\*red\*").exit()
 
 @check50.check(exists)
 def sentence():
