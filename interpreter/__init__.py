@@ -47,6 +47,20 @@ def test_3_divided_by_2():
     output = "1.5"
     check50.run("python3 interpreter.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
+@check50.check(exists)
+def test_3_modulus_2():
+    """input of \"3 % 2\" yields output of 1"""
+    input = "3 % 2"
+    output = "1"
+    check50.run("python3 interpreter.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
+@check50.check(exists)
+def test_3_divided_by_2():
+    """Checking that exponents work"""
+    input = "5 ** 3"
+    output = "125"
+    check50.run("python3 interpreter.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
 
 def regex(num):
     """match given number with a single floating point decimal; allow only text or whitespace on either side of number"""
