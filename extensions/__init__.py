@@ -39,6 +39,34 @@ def testpng():
     output = "image/png"
     check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
+@check50.check(exists)
+def testweb():
+    """input of index.html yields output of text/html"""
+    input = "index.html"
+    output = "text/html"
+    check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
+@check50.check(exists)
+def testweb2():
+    """input of index.htm yields output of text/html"""
+    input = "index.htm"
+    output = "text/html"
+    check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
+@check50.check(exists)
+def testweb3():
+    """input of style.css yields output of text/css"""
+    input = "style.css"
+    output = "text/css"
+    check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
+@check50.check(exists)
+def testweb():
+    """input of script file yields correct output"""
+    input = "myscript.js"
+    output = "text/javascript"
+    check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
 
 @check50.check(exists)
 def testpdf():
